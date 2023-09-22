@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- 基础信息 -->
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico">
+    <!--引入SweetAlert
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert@2.1.2/dist/sweetalert.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
+    <!--引入izitoast-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+    <!--引入fontawesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css"
+        media="all">
+<style>
+	
+
+</style>
+</head>
+
+<body>
+   
+    <header id="panel" class="panel-cover">
+	<div class="main">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                   
+                    <div align="center">
+                    	<font size="7" color="#ffffff" face="隶书">《Web程序设计》课程网站</font>
+                    </div>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">Welcome to Web programming.com</p>
+                    <hr class="panel-cover__divider iUp" />
+					
+                    <!--一言无法显示时的文字-->
+                    <p id="description" class="panel-cover__description iUp">每一个人都应该明确自己的方向和位置
+                        <br />
+                    </p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="/" target="_blank" class="blog-button">
+                                            <div>本站首页</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <!--<a onclick="update()" class="blog-button">-->
+                                        <a href="/" target="_blank" class="blog-button">
+                                            <div>教学大纲</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="content.html" target="_blank" class="blog-button">
+                                            <div>教学内容</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" target="_blank" class="blog-button">
+                                            <div>在线交流</div>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" class="blog-button">
+                                            <div>测试练习</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
+
+                                    <li class="navigation__item">
+                                        <a href="" title="Github" target="_blank">
+                                            <i class="fas fa-code-branch"></i>
+                                            <span class="label">Github</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" title="Telegram" target="_blank">
+                                            <i class="fab fa-telegram-plane"></i>
+                                            <span class="label">Telegram</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" title="Twitter" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                            <span class="label">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#"title="QQ" target="_blank">
+                                            <i class="fab fa-qq"></i>
+                                            <span class="label">QQ</span>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a onclick="weixin()" title="微信" target="_blank">
+                                            <i class="fab fa-weixin"></i>
+                                            <script>
+                                                function weixin() {
+                                                    Swal.fire({
+                                                        title: "请扫码",
+                                                        text: "请使用微信扫一扫",
+                                                        confirmButtonText: "好的",
+                                                        imageUrl: "./images/weixin.png",
+                                                        imageWidth: 150,
+                                                        imageHeight: 150
+                                                    })
+                                                }
+                                            </script>
+                                        </a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="/" title="Email">
+                                            <i class="fas fa-envelope"></i>
+                                            <span class="label">Email</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        
+     
+         <div class="panel-side">
+			 <div class="submit" id="ob">
+			     <span class="form_title"><font size="6" color="#ffffff" face="隶书">注&ensp;&ensp;册</font></span>
+			     <div class="form_input">
+			         <span>姓名：</span>
+			         <input class="inputs" type="text" value="" placeholder="小明">
+			     </div>
+			     <div class="form_input">
+			         <span>班级:</span>
+			         <input class="inputs" type="text" value="" placeholder="2102">
+			     </div>
+			     <div class="form_input">
+			         <span>学号：</span>
+			         <input class="inputs" type="text" value="" placeholder="20212831001">
+			     </div>
+			     <div class="form_input">
+			         <span>用户名：</span>
+			         <input class="inputs" type="text" value="" placeholder="小明"/>
+			     </div>
+			     <div class="form_input">
+			         <span>密码：</span>
+			         <input class="inputs" type="text" value="" placeholder="1234567">
+			     </div>
+			 	<div class="form_input">
+			 	    <span>确认密码：</span>
+			 	    <input class="inputs" type="text" value="" placeholder="1234567">
+			 	</div>
+			     <div class="btn_submit">
+			             <button class="btn">提交</button>
+			        <a href="index.html"><button class="home_href" onclick="tran()">登录</button></a>
+			     </div>
+			 </div>
+		 </div>
+     </div>    
+    </header>
+    <!--izitoast弹窗设置-->
+    <script>
+        iziToast.settings({
+            timeout: 4000,//调试
+            icon: 'Fontawesome',
+            closeOnEscape: 'true',
+            position: 'topRight',
+            transitionOut: 'fadeOutRight',
+            displayMode: '2',
+            layout: '2',
+            transitionIn: 'bounceInLeft',
+        });
+    </script>
+    <!--izitoast内容-->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/fetch.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript">
+    		function tran() {
+    			var  p = document.getElementsByClassName("submit");
+    			p.style.display="none";//onclick单击
+    		}
+    	</script>
+   
+     
+    
+</body>
+
+	
+
+
+</html>
